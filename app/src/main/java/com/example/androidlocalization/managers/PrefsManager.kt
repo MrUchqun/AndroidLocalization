@@ -3,7 +3,7 @@ package com.example.androidlocalization.managers
 import android.content.Context
 import android.content.SharedPreferences
 
-class PrefsManager private constructor(context: Context) {
+class PrefsManager(context: Context) {
     private val sharedPreferences: SharedPreferences =
         context.getSharedPreferences("MyPref", Context.MODE_PRIVATE)
 
@@ -25,5 +25,15 @@ class PrefsManager private constructor(context: Context) {
 
     fun getData(key: String?): String? {
         return sharedPreferences.getString(key, "en")
+    }
+
+    fun setLang(lang: String?) {
+        val editor = sharedPreferences.edit()
+        editor.putString("lang", lang!!)
+        editor.apply()
+    }
+
+    fun getLang(): String {
+        return sharedPreferences.getString("lang", "")?:""
     }
 }

@@ -12,6 +12,27 @@ import android.preference.PreferenceManager
 import androidx.annotation.RequiresApi
 import java.util.*
 
+object LocaleHelper {
+    fun setLocale(context: Context?): Context {
+        val sharedPref = PrefsManager(context!!)
+        return setAppLocale(context, sharedPref.getLang())
+    }
+
+    private fun setAppLocale(
+        context: Context,
+        locale: String
+    ): Context {
+        val res = context.resources
+        val dm = res.displayMetrics
+        val conf = res.configuration
+        conf.setLocale(Locale(locale.lowercase(Locale.getDefault())))
+        res.updateConfiguration(conf, dm)
+        return context
+    }
+
+}
+
+/*
 class LocaleManager(context: Context) {
     private val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
@@ -93,4 +114,4 @@ class LocaleManager(context: Context) {
     }
 
 
-}
+}*/

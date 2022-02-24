@@ -5,9 +5,12 @@ import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.androidlocalization.App
+//import com.example.androidlocalization.App
+import com.example.androidlocalization.Application
 import com.example.androidlocalization.R
-import com.example.androidlocalization.managers.LocaleManager
+import com.example.androidlocalization.managers.LocaleHelper
+//import com.example.androidlocalization.managers.LocaleManager
+import com.example.androidlocalization.managers.PrefsManager
 import timber.log.Timber
 import java.util.*
 
@@ -17,6 +20,7 @@ class LanguageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        LocaleHelper.setLocale(this)
         setContentView(R.layout.activity_language)
         Timber.d("onCreate: Inside LanguageActivity!")
         initViews()
@@ -26,17 +30,17 @@ class LanguageActivity : AppCompatActivity() {
         context = this
         val btnEnglish: Button = findViewById(R.id.btn_english)
         btnEnglish.setOnClickListener {
-            App.localManager!!.setNewLocale(context, LocaleManager.LANGUAGE_ENGLISH)
+            PrefsManager(context).setLang("en")
             finish()
         }
         val btnRussian: Button = findViewById(R.id.btn_russian)
         btnRussian.setOnClickListener {
-            App.localManager!!.setNewLocale(context, LocaleManager.LANGUAGE_RUSSIAN)
+            PrefsManager(context).setLang("ru")
             finish()
         }
         val btnUzbek: Button = findViewById(R.id.btn_uzbek)
         btnUzbek.setOnClickListener {
-            App.localManager!!.setNewLocale(context, LocaleManager.LANGUAGE_UZBEK)
+            PrefsManager(context).setLang("uz")
             finish()
         }
 
