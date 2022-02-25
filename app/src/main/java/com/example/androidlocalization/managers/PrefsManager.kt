@@ -17,7 +17,7 @@ class PrefsManager(context: Context) {
         }
     }
 
-    fun saveData(key: String?, value: String?) {
+    fun saveDataString(key: String?, value: String?) {
         val prefsEditor = sharedPreferences!!.edit()
         prefsEditor.putString(key, value)
         prefsEditor.apply()

@@ -19,9 +19,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         val btnHome: Button = findViewById(R.id.btn_home)
-        btnHome.text = getString(R.string.app_name)
         btnHome.setOnClickListener {
             callLanguageActivity()
+        }
+
+        val btnSharedPrefs: Button = findViewById(R.id.btn_sharedPrefs)
+        btnSharedPrefs.setOnClickListener {
+            callSharedPreferencesActivity()
         }
     }
 

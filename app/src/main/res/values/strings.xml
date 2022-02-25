@@ -3,6 +3,7 @@
     <string name="lan_english">English</string>
     <string name="lan_russian">Russian</string>
     <string name="lan_uzbek">Uzbek</string>
+    <string name="shared_preferences">Shared Preferences</string>
 
     <plurals name="my_cats">
         <item quantity="one">I have %s cat</item>

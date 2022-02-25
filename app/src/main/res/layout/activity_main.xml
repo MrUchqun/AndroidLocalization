@@ -10,8 +10,16 @@
 
     <Button
         android:id="@+id/btn_home"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
         android:text="@string/app_name" />
+
+    <Button
+        android:id="@+id/btn_sharedPrefs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:text="@string/shared_preferences" />
 
 </LinearLayout>

@@ -22,8 +22,7 @@ class SharedPreferencesActivity : AppCompatActivity() {
         btnSave.setOnClickListener {
             val email = etEmail.text.toString()
             val prefs = PrefsManager.getInstance(this)
-            prefs!!.saveData("email", email)
-//            Timber.d(prefs!!.getData("email"))
+            prefs!!.saveDataString("email", email)
         }
     }
 
