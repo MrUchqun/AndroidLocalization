@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/AndroidLocalization/app/src/main/res/drawable/background_button.xml" value="0.1915" />
         <entry key="..\:/AndroidStudioProjects/AndroidLocalization/app/src/main/res/layout/activity_language.xml" value="0.27447916666666666" />
         <entry key="..\:/AndroidStudioProjects/AndroidLocalization/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
         <entry key="..\:/AndroidStudioProjects/AndroidLocalization/app/src/main/res/layout/activity_shared_preferences.xml" value="0.27447916666666666" />

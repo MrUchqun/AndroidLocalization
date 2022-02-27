@@ -9,6 +9,8 @@ import com.example.androidlocalization.managers.PrefsManager
 import timber.log.Timber
 
 class SharedPreferencesActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared_preferences)
@@ -16,13 +18,14 @@ class SharedPreferencesActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        val etEmail: EditText = findViewById(R.id.et_email)
+        val etData: EditText = findViewById(R.id.et_data)
         val btnSave: Button = findViewById(R.id.btn_save)
 
         btnSave.setOnClickListener {
-            val email = etEmail.text.toString()
             val prefs = PrefsManager.getInstance(this)
-            prefs!!.saveDataString("email", email)
+            val data = etData.text.toString()
+            val key = prefs!!.checkDataType(data).toString()
+            prefs.saveData(key, data)
         }
     }
 

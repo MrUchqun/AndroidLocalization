@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.androidlocalization.R
-import com.example.androidlocalization.managers.LocaleHelper
+import com.example.androidlocalization.managers.LocaleManager
+//import com.example.androidlocalization.managers.LocaleHelper
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        LocaleHelper.setLocale(this)
+        LocaleManager(this).setLocale(this)
+//        LocaleHelper.setLocale(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initViews()

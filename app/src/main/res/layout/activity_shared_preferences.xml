@@ -13,17 +13,20 @@
         android:padding="20dp">
 
         <EditText
-            android:id="@+id/et_email"
+            android:id="@+id/et_data"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Email" />
+            android:hint="Enter data"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btn_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Save" />
+            android:background="@drawable/background_button"
+            android:text="Save Data"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 

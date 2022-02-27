@@ -13,18 +13,26 @@
         android:id="@+id/btn_uzbek"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/lan_uzbek" />
+        android:background="@drawable/background_button"
+        android:text="@string/lan_uzbek"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btn_russian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/lan_russian" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_button"
+        android:text="@string/lan_russian"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btn_english"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/lan_english" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_button"
+        android:text="@string/lan_english"
+        android:textColor="@color/white" />
 
 </LinearLayout>
